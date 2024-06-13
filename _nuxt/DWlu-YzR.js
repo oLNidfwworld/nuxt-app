@@ -1,0 +1,1 @@
+import{u as s}from"./C0V7vZvO.js";import{d as t,o,C as a,H as n,I as r,u as c}from"./D6LKBmlG.js";const u={class:"container"},_={class:"title-h1"},f=t({__name:"[num]",setup(i){const e=s();return(m,p)=>(o(),a("div",u,[n("h1",_,"Документ "+r(c(e).params.num),1)]))}});export{f as default};

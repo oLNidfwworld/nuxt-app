@@ -1,0 +1,1 @@
+import{_ as e}from"./C0V7vZvO.js";import{C as t,o,H as s}from"./D6LKBmlG.js";const c={},n={class:"container"},r=s("h2",{class:"title-h1"}," Регистрация ",-1),_=[r];function a(i,d){return o(),t("div",n,_)}const h=e(c,[["render",a]]);export{h as default};
