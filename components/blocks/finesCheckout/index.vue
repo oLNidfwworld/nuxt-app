@@ -42,10 +42,12 @@
     </section>
 </template>
 <script setup lang="ts">
-import { Fancybox } from '@fancyapps/ui';
+
 import { Btn } from '~/components/base/btn';
 import { Inpt } from '~/components/base/inpt'; 
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import * as FancyApps from '@fancyapps/ui'; 
+
 const msg = ref(''); 
 const pending = ref(false);
 
@@ -62,7 +64,7 @@ const submIt = async ( ) => {
 }
 const showVideo = ( ) => { 
     
-    new Fancybox([
+    new FancyApps.Fancybox([
         {
             // src: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
             src : 'https://www.youtube.com/watch?v=TAmInvloe_s',
