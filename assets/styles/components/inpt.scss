@@ -1,0 +1,28 @@
+@import '../vars/colors.scss';
+.inpt-box{
+    display : flex;
+    flex-direction : column; 
+    &__label{
+        display: block;
+        margin-bottom: 5px; 
+        color : $black;
+        font-size : 12px;
+        line-height: 1.2;
+    }
+    &__inpt {
+        display: block;
+        border : 1px solid $gray;
+        border-radius: 5px;
+        height : 40px;
+        padding : 0 15px;
+
+        transition: border-color 0.3s ease-out;
+
+        &:focus{ 
+            border-color: $blue;
+        }
+        &:user-invalid{
+            border-color : $red;
+        }
+    }
+}

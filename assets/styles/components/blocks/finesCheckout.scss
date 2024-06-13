@@ -1,0 +1,123 @@
+
+@import '/assets/styles/vars/colors.scss';
+@import '/assets/styles/mixins.scss';
+.checkout-fines {
+    gap: 40px;
+    grid-template-columns: auto 532px;
+
+    @include min-llg{
+        display: grid;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+    &__picture{
+        display: none;
+
+        @include min-llg{
+            display: block;
+        }
+    }
+}
+
+.checkout-fines-form {
+    
+
+    &__inpt-wrapper {
+        
+        position: relative;
+        margin-bottom: 15px;
+        grid-template-columns: 9fr 6fr;
+        column-gap: 30px;
+        row-gap: 16px;
+
+        & .inpt-box:last-of-type{
+            grid-column: span 2 / span 2; 
+        }
+
+        & > * + * {
+            margin-top: 10px;
+        }
+
+        @include min-md{
+            display: grid;
+            
+            & > * + * {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__accept-buttons {
+        display : flex;
+        flex-direction: column; 
+        gap : 21px;
+        margin-bottom: 16px;
+        @include min-md{
+            flex-direction: row;
+        }
+    }
+    &__submit.m-btn {
+        padding: 10px 20px;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        font-size: 18px;
+        justify-content: center;
+        width: fit-content;
+        @include min-lg{
+            justify-content: left;
+        }
+    }
+    &__cancel{
+        display : flex;
+        align-items: center;
+        padding : 10px 20px;
+        justify-content: center;
+        width: fit-content;
+        & :first-child{
+            margin-right : 6.6px;
+        }
+        & :nth-child(2){
+            margin-right : 4px;
+        }
+        & :nth-child(3){
+            color : $blue;
+        }
+        @include min-lg{
+            justify-content: left;
+        }
+    }
+    &__approve {
+        font-size : 13px;
+        line-height: 1.2;
+        color : $dark-gray;
+    }
+    &__msg{
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        font-size : 14px;
+        color : $green;
+
+        @include min-llg {
+            bottom: 100%;
+        }
+    }
+}
+
+.msg-appear-enter-active,
+.msg-appear-leave-active{
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+.msg-appear-enter-to,
+.msg-appear-leave-from{
+    transform: translateX(0);
+    opacity: 1;
+}
+.msg-appear-enter-from,
+.msg-appear-leave-to{ 
+    opacity: 0;
+    transform: translateX(-10px);
+}

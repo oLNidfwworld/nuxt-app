@@ -1,0 +1,56 @@
+
+@import '/assets/styles/vars/colors.scss';
+@import '/assets/styles/mixins.scss';
+@import '/assets/styles/vars/breakboints.scss';
+
+.benef-cards-title{
+    margin-bottom: 33px;
+}
+
+.benef-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 35px;
+    grid-auto-rows: 1fr;
+    @include min-lg{
+        grid-auto-rows: unset;
+    }
+}
+
+.benef-card {
+    display: flex;
+    background-color: $light-gray;
+    align-items: center;
+    border-radius: 10px;
+    line-height: 1.2;
+    padding: 16px 12px;
+    gap: 15px; 
+
+    
+    @include min-sm { 
+        padding: 24px 20px;
+    }
+    
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap : 10px;
+    }
+    &__name {
+        color: $dark-blue;
+        font-weight: 700;
+        font-size: 16px;
+        @include min-sm { 
+            font-size: 18px;
+        }
+    }
+
+    &__description {
+        color: $black;
+        font-size: 14px;
+        
+        @include min-sm { 
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@import './mixins.scss';
+@import './resets.scss';
+@import './vars/colors.scss';
+
+body {
+    font-family: 'PT Sans';
+    letter-spacing: .065px;
+}
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+.page-header{
+    flex : 0 0 auto;
+}
+.page-content{
+    flex : 1 0 auto;
+    padding-top : 80px;
+    padding-bottom:  30px;
+}
+.page-footer{
+    flex : 0 0 auto;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 10px; 
+    
+    @include min-md {
+        max-width: 700px; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include min-lg {
+        max-width: $lg;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 14px;
+    }
+
+
+    @include min-llg {
+        max-width: 1163px; 
+    }
+ 
+}
+.title-h1{
+    font-size : 30px;
+    font-weight: 700;
+    color : $black;
+    line-height: 1.2;
+    
+    @include min-lg { 
+        font-size : 41px;
+    }
+}
+.title-h2{
+    font-size : 20px;
+    text-align: center;
+    color : $black;
+    font-weight: 700;
+    line-height: 1.2;
+
+    
+    @include min-lg { 
+        font-size : 34px;
+    }
+
+}
