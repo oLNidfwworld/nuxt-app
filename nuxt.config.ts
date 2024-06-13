@@ -18,5 +18,8 @@ export default defineNuxtConfig({
     }
   },
   components : false,
-  modules: ["@nuxt/eslint", "@nuxtjs/google-fonts", "nuxt-swiper"]
+  modules: ["@nuxt/eslint", "@nuxtjs/google-fonts", "nuxt-swiper"],
+  app : {
+    baseURL : '/nuxt-app/'
+  }
 })
